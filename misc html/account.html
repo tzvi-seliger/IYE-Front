@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+    <style>
+        html,
+        body,
+        #root {
+            width: 100%;
+            height: 100%;
+        }
+
+        #category-container {
+            width: 100%;
+            height: 20%;
+            background: black;
+        }
+
+        .category-item {
+            display: inline-block;
+            width: 49%;
+            height: 100%;
+        }
+
+        #employee-item {
+            display: inline-block;
+            width: 49%;
+            height: 100%;
+            background: green;
+        }
+
+        #training-item {
+            display: inline-block;
+            width: 49%;
+            height: 100%;
+            background: orange;
+        }
+
+        .category-page {
+            width: 100%;
+            background: black;
+            height: 100%;
+            color: white;
+        }
+
+        #employee-page {
+            display: none;
+            background: green;
+        }
+
+        #training-page {
+            background: orange;
+        }
+
+        table {
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 1%;
+            padding: 1%;
+            width: 85%;
+            background: white;
+            color: black;
+        }
+
+        tbody td {
+            padding: 1%;
+            font-size: 16px;
+            font-family: Arial;
+            border: 1px solid black;
+        }
+
+        thead {
+            font-size: 30px;
+            font-family: Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+
+        <div id="header">
+            <div class="fifthhead box">
+                <p class="center">
+                    <a href="index.html">
+                        <img src="6284bb47-eff3-4cc6-acdd-8ba1d6e9bd15_200x200.png">
+                    </a>
+                </p>
+            </div>
+            <div class="fifthhead box">
+                <a class="center full regtext" href="account.html">Account</a>
+            </div>
+            <div class="fifthhead box">
+                <a class="center full regtext" href="pricing.html">Pricing</a>
+            </div>
+            <div class="fifthhead box">
+                <a class="center full regtext">Login</a>
+            </div>
+        </div>
+
+
+        <div id="category-container">
+            <div class="category-item" id="employee-item">Employees</div>
+            <div class="category-item" id="training-item">Trainings</div>
+        </div>
+        <div class="category-page" id="employee-page">
+            <div id="root">
+                <h1>Employees Page</h1>
+                <table id="employeeTable">
+                    <thead>
+                        <tr>
+                            <td>First Name</td>
+                            <td>Last Name</td>
+                            <td>Current Training
+                            <td>Current Position
+                            <td>Primary Interest
+                            <td>
+                        </tr>
+                    </thead>
+                    <tbody id="employeeTBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="category-page" id="training-page">This is the Trainings page</div>
+    </div>
+    <script>
+
+        function doc(id) {
+            return document.getElementById(id)
+        }
+
+        function switchElDisplay(target, display, noDisplay) {
+            target.addEventListener("click", function () {
+                if (window.getComputedStyle(display).display === "none") {
+                    console.log("none")
+                    display.style.display = "block"
+                    noDisplay.style.display = "none"
+                }
+            })
+        }
+
+        switchElDisplay(doc("employee-item"), doc("employee-page"), doc("training-page"))
+        switchElDisplay(doc("training-item"), doc("training-page"), doc("employee-page"))
+
+        var employees = [
+            {
+                fname: "tzvi",
+                lname: "seliger",
+                currentTraining: "none",
+                currentOccupation: "programmer",
+                primaryInterest: "Couch Potato"
+            },
+
+            {
+                fname: "Raizel",
+                lname: "seliger",
+                currentTraining: "none",
+                currentOccupation: "Youth Programming",
+                primaryInterest: "Go Getter"
+            },
+
+        ]
+
+        function createEl(el, text) {
+            var el = document.createElement(el)
+            if (text) el.innerHTML = text
+            return el
+        }
+
+        employees.forEach(function (item) {
+            var tr = createEl("tr")
+            for (let prop in item) {
+                tr.appendChild(createEl("td", item[prop]))
+            }
+            document.getElementById("employeeTBody").appendChild(tr)
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+
+
+#register {
+    width: 100%;
+    height: 100%;
+}
+
+#register {
+    font-family: 'rock salt', cursive;
+    color: orange;
+    font-weight: bold;
+    text-decoration-line: none;
+}
+
+#register a {
+    text-decoration: none;
+    color: orange;
+    font-family: 'rock salt', cursive;
+    font-weight: bold;
+}
+
+.default-form-input{
+    background: purple;
+    color: white;
+    border-radius: 15px;
+}
+

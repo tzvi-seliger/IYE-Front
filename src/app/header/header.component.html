@@ -1,0 +1,32 @@
+<div id="header">
+    <div class="logodiv" style="padding: 8px;">
+        <a id ="logolink" href="index.html" 
+                          style="padding: 6px;
+                                 text-decoration: none; 
+                                 box-shadow: 0px 2px 5px rosybrown;">
+            <span style="color: purple; 
+                         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                         font-size: 20px;"
+                         >
+                <mat-icon style="border: 3px solid white; vertical-align: middle; width: 27%; min-width: 20px; margin-right: -20px;">monetization_on</mat-icon>
+                <mat-icon style="border: 3px solid white; vertical-align: middle;  width: 27%; min-width: 20px;">repeat</mat-icon>
+                <mat-icon style=" border: 3px solid white; vertical-align: middle;  width: 27%; min-width: 20px; margin-left: -20px;">people</mat-icon>
+            </span>
+        </a>
+    </div>
+    <div class="regdiv">
+        <app-register-button *ngIf="!isLoggedIn" class="center full regtext">
+        </app-register-button>
+        <p class="default-link" *ngIf="isLoggedIn">Logout</p>
+    </div>
+    
+    <div class="regdiv">
+        <a class="default-link" [routerLink]="['/blog']">Blog</a>
+    </div>
+    <div class="regdiv">
+            <a class="default-link" [routerLink]="['/Pricing']">Pricing</a>
+        </div>
+    <div class="regdiv" *ngIf="auth.isloggedIn">
+        <p style="float:right; font-size: .7rem">Welcome {{auth.user.userName}}!</p>
+    </div>
+</div>

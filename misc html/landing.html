@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+</head>
+<div id="container">
+
+    <div id="header">
+        <img src='../assets/images/logo.png' width = "500"/>
+        <div class="fifthhead box">
+            <a class="center full regtext" href="account.html">Account</a>
+        </div>
+        <div class="fifthhead box">
+            <a class="center full regtext" href="pricing.html">Pricing</a>
+        </div>
+        <div class="twofifthhead box" id="loginregister"></div>
+    </div>
+
+    <app-body class="app-body">
+        <div id="body">
+            <app-header class="app-header"></app-header>
+            <app-register-button></app-register-button>
+
+            <div class="quarter"></div>
+            <div class="half">
+
+                <div class="maintext box">
+                    <h2> The Employee Development Platform</h2>
+                    <br>
+                    <br>
+                    <h2>
+                        Get the most from your employees.
+                        <br> Hire them, Train Them, Reap the benefits.
+                        <br> Track progress easily.
+                    </h2>
+
+                </div>
+            </div>
+
+            <div class="box emailcontainer">
+                <input id="email" placeholder="Email" />
+                <button id="startbutton">Start</button>
+                <div id="addemail"></div>
+            </div>
+
+            <div class="quarter"></div>
+        </div>
+    </app-body>
+    <app-footer class="app-footer"></app-footer>
+
+    <!-- <router-outlet></router-outlet> -->
+
+    <div *ngFor="let account of accounts">
+        <a [routerLink]="['AccountInfo']">
+            <p>{{account.accountName}}</p>
+        </a>
+        <p>{{account.accountDescription}}</p>
+        <p>{{account.accountLogo}}</p>
+        <p>{{account.trainingList}}</p>
+        <p>{{account.accountId}}</p>
+    </div>
+
+</div>

@@ -1,0 +1,122 @@
+// .app-header {
+//     width: 100%;
+//     height: 15%;
+//     color: black;
+//     font-family: Arial;
+// }
+
+// * {
+//   -moz-box-sizing: border-box;
+//   -webkit-box-sizing: border-box;
+//   box-sizing: border-box;
+// }
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+// .container {
+//   width: 100%;
+//   height: 100%;
+//   // padding-top: 3%;
+//   // padding-bottom: 3%;
+// }
+
+// .full {
+//   width: 100%;
+//   height: 100%;
+// }
+
+#header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  height: 30%;
+}
+
+#logolink, #logolink > img{
+    height: 100%;
+}
+.logodiv{
+    padding: 0;
+
+}
+.regdiv {
+    padding: 10px;
+}
+// .third {
+//   display: inline-block;
+//   width: 32.7%;
+//   height: 100%;
+//   vertical-align: top;
+//   padding: 10%;
+// }
+
+// .half {
+//   display: inline-block;
+//   width: 49.5%;
+//   vertical-align: top;
+//   padding: 10%;
+// }
+
+// .quarter {
+//   display: inline-block;
+//   width: 24.5%;
+//   vertical-align: top;
+//   padding: 3%;
+// }
+
+// .thirdheight {
+//   width: 100%;
+//   height: 32%;
+// }
+
+// .fifthhead {
+//   display: inline-block;
+//   width: 19%;
+//   height: 100%;
+// }
+
+// .twofifthhead {
+//   display: inline-block;
+//   margin-top: 1.5%;
+//   width: 38%;
+//   height: 100%;
+// }
+
+// .threefifthhead {
+//   display: inline-block;
+//   width: 50%;
+//   height: 60%;
+//   border: 1px solid orange;
+// }
+
+// .headertext {
+//     width: 100%;
+//     font-weight: bold;
+//     font-size: 2.5vw;
+// }
+
+// .box {
+//   vertical-align: center;
+//   text-align: center;
+// }
+
+// .center {
+//     position: relative;
+//     top: 50%;
+//     transform: translateY(-50%);
+// }
+
+// .maintext,
+// .regtext {
+//     font-size: 1.5vw;
+//     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+// }
+
+// .genericstyle {
+//     background: white;
+// }
+
+// .register{
+//    float: right;
+// }

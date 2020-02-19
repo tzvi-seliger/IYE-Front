@@ -1,0 +1,7 @@
+<!-- <nav>
+  <app-navitem *ngFor="let route of routes" [navtext] = "route">
+  </app-navitem>
+</nav> -->
+
+
+<div *ngFor="let route of routes">{{route | date: 'shortDate'}}</div>

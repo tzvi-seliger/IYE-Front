@@ -1,0 +1,20 @@
+<app-body>
+    <table id="featuresList">
+        <thead>
+            <tr>
+                <td>Description</td>
+                <td>Basic</td>
+                <td>Standard</td>
+                <td>Premium</td>
+            </tr>
+        </thead>
+        <tbody id="featuretablebody">
+            <tr *ngFor="let feature of features" class ="mytr">
+                <td>{{feature.name}}</td>
+                <td [ngClass] = "feature.inBasic ? 'hastrue': 'hasfalse'" ></td>
+                <td [ngClass] = "feature.inStandard ? 'hastrue': 'hasfalse'"></td>
+                <td [ngClass] = "feature.inPremium ? 'hastrue': 'hasfalse'"></td>
+            </tr>
+        </tbody>
+    </table>
+</app-body>
